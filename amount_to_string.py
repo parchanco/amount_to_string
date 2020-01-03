@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# Part of Aselcis Consulting SL. See LICENSE file for full copyright and licensing details.
+
 UNITS = (
     '',
     'UN ',
@@ -56,7 +59,7 @@ def to_word(number):
     if centimos > 0:
         ans += currency_plural + ' CON ' + \
             to_word_int(centimos, currency_single,
-                        currency_plural, cents) + ' CENTIMOS'
+                        currency_plural, cents) + ' ' + cents
     else:
         ans += currency_plural
     return ans.title()
